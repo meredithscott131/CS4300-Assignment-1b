@@ -1,16 +1,15 @@
-//! [code]
-
+#include "Model.h"
 #include "Box.h"
 #define GLM_FORCE_SWIZZLE
 #include "Stencil.h"
 using namespace std;
 
-int main(int argc,char *argv[]) {
+Model::Model() {
     Stencil stencil(0,0,100,100);
     //carve out a hole from its center
     stencil.cut(20,20,60,60);
-   /*
 
+    /*
     //more complex example 
     Stencil stencil(0,0,310,310);
     
@@ -20,8 +19,15 @@ int main(int argc,char *argv[]) {
             stencil.cut(10+30*(i),10+30*(j),20,20);
         }
     }
+
+    stencil.cut(110,80,120,55);
     */
-    
 }
 
-//! [code]
+vector<util::PolygonMesh<VertexAttrib>> Model::getMeshes() {
+    return meshes;
+}
+
+Model::~Model() {
+
+}
