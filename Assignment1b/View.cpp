@@ -28,7 +28,7 @@ void View::init(Callbacks *callbacks,vector<util::PolygonMesh<VertexAttrib> >& m
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    window = glfwCreateWindow(800, 800, "The Rotating Square Illusion", NULL, NULL);
+    window = glfwCreateWindow(1000, 1000, "Stencil", NULL, NULL);
     if (!window)
     {
         glfwTerminate();

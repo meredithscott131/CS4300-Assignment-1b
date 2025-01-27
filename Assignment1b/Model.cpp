@@ -8,8 +8,8 @@ Model::Model() {
     Stencil stencil(0,0,100,100);
     //carve out a hole from its center
     stencil.cut(20,20,60,60);
+   /*
 
-    /*
     //more complex example 
     Stencil stencil(0,0,310,310);
     
