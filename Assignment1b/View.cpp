@@ -118,7 +118,7 @@ void View::display() {
     glClear(GL_COLOR_BUFFER_BIT);
     
 
-    modelview = glm::rotate(glm::mat4(1.0),(float)glfwGetTime(),glm::vec3(0,0,1));
+    modelview = glm::mat4(1.0);
     //send modelview matrix to GPU  
     glUniformMatrix4fv(shaderLocations.getLocation("modelview"), 1, GL_FALSE, glm::value_ptr(modelview));
     //send projection matrix to GPU    

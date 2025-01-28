@@ -18,10 +18,10 @@ class Box {
     , height(height) {
     }
     ~Box(){}
-    inline int getX() {return x;}
-    inline int getY() {return y;}
-    inline int getWidth() {return width;}
-    inline int getHeight() {return height;}
+    inline int getX() const {return x;}
+    inline int getY() const {return y;}
+    inline int getWidth() const {return width;}
+    inline int getHeight() const {return height;}
 
     /**
      * Find the intersection (common area) of another box with this one.

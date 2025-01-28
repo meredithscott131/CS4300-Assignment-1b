@@ -4,13 +4,10 @@
 #include "Stencil.h"
 using namespace std;
 
-Model::Model() {
-    Stencil stencil(0,0,100,100);
-    //carve out a hole from its center
-    stencil.cut(20,20,60,60);
-   /*
+#include "VertexAttribWithColor.h"
+#include "PolygonMesh.h" // Include your PolygonMesh header
 
-    //more complex example 
+Model::Model() {
     Stencil stencil(0,0,310,310);
     
     //create a set of 10x10 windows
@@ -21,7 +18,11 @@ Model::Model() {
     }
 
     stencil.cut(110,80,120,55);
-    */
+    meshes = stencil.getMeshes(); // Store meshes for rendering
+    // Example of adding a single mesh to the vector
+    if (!meshes.empty()) {
+        meshes.push_back(meshes[0]);
+    }
 }
 
 vector<util::PolygonMesh<VertexAttrib>> Model::getMeshes() {
